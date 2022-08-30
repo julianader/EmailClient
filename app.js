@@ -39,3 +39,12 @@ function createTag(label){
     div.appendChild(closeBtn);
     return div;
 }
+
+document.addEventListener('click', function(e) {
+    if (e.target.tagName === 'I') {
+        const value= e.target.getAttribute('data-item');
+        const index= tags.indexOf(value);
+        tags = [...tags.slice(0, index), ...tags.slice(index + 1)];
+        addTags();
+    }
+})
