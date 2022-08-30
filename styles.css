@@ -195,3 +195,23 @@
     background:rgb(248,188, 188);
     display:none;
 }
+.right{
+    margin-top:15px;
+    background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('Images/pattern.jpg');
+}
+.email-img{
+    padding-top:1000px;padding:40px;
+    margin-top:100px;
+}
+.textarea{
+    margin:15px;
+}
+.bodytext{
+    border-radius: 25px;
+    padding:15px;
+    border:2px solid rgb(102, 199, 255);
+}
+
+.form-control{
+    border-radius:50px;
+}
