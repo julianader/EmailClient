@@ -48,3 +48,22 @@ document.addEventListener('click', function(e) {
         addTags();
     }
 })
+
+function send(){
+    valid = true;
+    if (tags.length<1){
+        valid=false;
+    }
+    tags.forEach(function(tag){
+        if (!validateEmail(tag)){
+            valid=false;
+        };
+    })
+    if (valid==true){
+        sendEmail();
+    }
+    else{
+        document.getElementById('error').style.display = "block";
+        document.getElementById('success').style.display = "none";
+    }
+}
