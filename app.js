@@ -67,3 +67,13 @@ function send(){
         document.getElementById('success').style.display = "none";
     }
 }
+
+function validateEmail(email){
+    const re=  /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return re.test(email);
+}
+function sendEmail(){
+    document.getElementById('success').style.display = "block";
+    document.getElementById('error').style.display = "none";
+
+}
