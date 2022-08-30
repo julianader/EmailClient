@@ -3,13 +3,22 @@
 }
 .body{
     background-color: #5049d1;
+    padding:0px;
+    margin:0;
 }
 .container{
     background-image:url("Images/pattern_wave.png");
     background-color: whitesmoke;
-    height:1500px;
-    max-width:100%;
-    margin:50px 50px 50px 50px;
+    height:1350px;
+    min-width:1000px;
+    padding:0;
+    margin:50px 0px 50px 0px;
+    border:2px solid rgba(102, 199, 255, 0);
+    box-shadow: 0 50px 50px 0 black;
+    border-radius:50px;
+    position:relative;
+    Overflow:hidden;
+    z-index:999;
 }
 .navbar{
     width:100%;
@@ -40,6 +49,12 @@
     background-color: rgba(255,255,255,0.5);
     height:425px;
     margin:10px;
+    border:2px solid rgba(102, 199, 255, 0);
+    box-shadow: 0 10px 10px 0 darkgrey;
+    border-radius:50px;
+    position:relative;
+    Overflow:hidden;
+    z-index:999;
 }
 .top h1{
     float: left; 
@@ -54,18 +69,23 @@
 /*=================================================================*/
 .main{
     height:700px;
-    margin-left:100px;
+    margin-left:10px;
     margin-top:70px;
-    margin-right:100px;
     display: flex;
 }
 .left{
     padding:5px;
+    padding-left:40px;
     padding-top:20px;
-    width:450px;
+    width:1500px;
     background-color: rgba(255,255,255,0.7);
     display:inline-block;
     margin-top:1rem;
+    box-shadow: 0 10px 10px 0 darkgrey;
+    border-radius:50px;
+    position:relative;
+    Overflow:hidden;
+    z-index:999;
 }
 .left h1{
     text-align: center;
@@ -78,24 +98,25 @@
 }
 
 .left h3{
-    padding-left:20px;
-    padding-right:10px;
+    
+    padding-bottom:15px;
+    text-align: center;
     background-image:linear-gradient(to bottom, red 0%, #f37b12 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color:transparent;
     font-weight:600;
 }
 .left h6{
+    text-align: center;
     font-weight:600;
-    padding-left:20px;
-    padding-bottom:10px;
+    padding-bottom:10px; 
 }
 .tag-container{
     border:2px solid rgb(102, 199, 255);
     display:flex;
     padding:10px;
     margin:30px;
-    border-radius:45px;
+    border-radius:15px;
 }
 .tag-container .tag{
     padding: 0.5rem;
@@ -140,14 +161,13 @@
     padding:0px 20px;
     padding-top:10px;
     border:none;
-    
     border-radius:6px;
     color:#fff;
     cursor:pointer;
     position:relative;
     transition:all 0.35s;
 }
-.main_btn h4{
+.main_btn h2{
     position:relative;
     z-index:2;
     color:#fff;
@@ -196,12 +216,13 @@
     display:none;
 }
 .right{
-    margin-top:15px;
-    background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('Images/pattern.jpg');
+    filter: drop-shadow(15px 15px 15px darkgrey);
+    background-repeat:no-repeat;
 }
 .email-img{
-    padding-top:1000px;padding:40px;
-    margin-top:100px;
+    width:350px;
+    float: right;
+    filter: drop-shadow(10px 10px 10px darkgrey);;
 }
 .textarea{
     margin:15px;
@@ -209,6 +230,7 @@
 .bodytext{
     border-radius: 25px;
     padding:15px;
+    margin-left:12px;
     border:2px solid rgb(102, 199, 255);
 }
 
