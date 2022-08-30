@@ -68,7 +68,7 @@
 /*=================================================================*/
 /*=================================================================*/
 .main{
-    height:700px;
+    height:730px;
     margin-left:10px;
     margin-top:70px;
     display: flex;
@@ -83,6 +83,7 @@
     margin-top:1rem;
     box-shadow: 0 10px 10px 0 darkgrey;
     border-radius:50px;
+    margin-right:10px;
     position:relative;
     Overflow:hidden;
     z-index:999;
