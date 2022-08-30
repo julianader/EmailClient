@@ -1,0 +1,13 @@
+*{
+    font-family:'Cabin Sketch', sans-serif;
+}
+.body{
+    background-color: #5049d1;
+}
+.container{
+    background-image:url("Images/pattern_wave.png");
+    background-color: whitesmoke;
+    height:1500px;
+    max-width:100%;
+    margin:50px 50px 50px 50px;
+}
