@@ -11,3 +11,28 @@
     max-width:100%;
     margin:50px 50px 50px 50px;
 }
+.navbar{
+    width:100%;
+}
+.navbar_links{
+    color:#5049d1;
+    align-items:center;
+    justify-content: center;
+    width:100px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding-top:30px;
+    padding-right:30px;
+    font-size:1.3rem;
+}
+.navbar ul{
+    display:flex;
+    align-items:center;
+    list-style:none;
+}
+
+.navbar h3{
+    padding-left: 30px;
+    padding-top:30px;
+}
