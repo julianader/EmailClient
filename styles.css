@@ -59,3 +59,34 @@
     margin-right:100px;
     display: flex;
 }
+.left{
+    padding:5px;
+    padding-top:20px;
+    width:450px;
+    background-color: rgba(255,255,255,0.7);
+    display:inline-block;
+    margin-top:1rem;
+}
+.left h1{
+    text-align: center;
+    background-color:#032539;
+    background-image:linear-gradient(to bottom, #000 0%, #5049d1 100%);
+    background-size:100%;
+    font-weight:600;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+}
+
+.left h3{
+    padding-left:20px;
+    padding-right:10px;
+    background-image:linear-gradient(to bottom, red 0%, #f37b12 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    font-weight:600;
+}
+.left h6{
+    font-weight:600;
+    padding-left:20px;
+    padding-bottom:10px;
+}
