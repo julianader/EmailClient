@@ -19,3 +19,8 @@ function addTags(){
     })
 }
   
+function reset(){
+    document.querySelectorAll('.tag').forEach(function(tag){
+        tag.parentElement.removeChild(tag);
+    })
+}
