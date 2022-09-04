@@ -65,27 +65,16 @@
 /*=================================================================*/
 /*=================================================================*/
 .main {
-    height: 730px;
-    margin-left: 10px;
+    margin: 10px;
     margin-top: 70px;
-    display: flex;
-}
-.left {
-    padding: 5px;
-    padding-left: 40px;
-    padding-top: 20px;
-    width: 1500px;
+    padding: 8px;
+    width: 100%;
     background-color: rgba(255, 255, 255, 0.7);
-    display: inline-block;
-    margin-top: 1rem;
     box-shadow: 0 10px 10px 0 darkgrey;
     border-radius: 50px;
-    margin-right: 10px;
-    position: relative;
     overflow: hidden;
-    z-index: 999;
 }
-.left h1 {
+.main h1 {
     text-align: center;
     background-color: #032539;
     background-image: linear-gradient(to bottom, #000 0%, #5049d1 100%);
@@ -95,7 +84,7 @@
     -webkit-text-fill-color: transparent;
 }
 
-.left h3 {
+.main h3 {
     padding-bottom: 15px;
     text-align: center;
     background-image: linear-gradient(to bottom, red 0%, #f37b12 100%);
@@ -103,7 +92,7 @@
     -webkit-text-fill-color: transparent;
     font-weight: 600;
 }
-.left h6 {
+.main h6 {
     text-align: center;
     font-weight: 600;
     padding-bottom: 10px;
@@ -139,11 +128,6 @@
     padding: 5px;
     outline: none;
     border: 0;
-}
-.myInput {
-    width: 400px;
-    margin-top: 0;
-    max-width: 450px;
 }
 .sendButton {
     align-items: center;
