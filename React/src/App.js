@@ -1,12 +1,12 @@
-import Navbar1 from "./Components/Navbar";
-import Top from "./Components/top.js";
-import Main from "./Components/Main.js";
 import { Container } from "./Components/Layout/Container";
+import Main from "./Components/Main.js";
+import { Navbar } from "./Components/Navbar";
+import Top from "./Components/top.js";
 
 function App() {
     return (
         <Container>
-            <Navbar1 text="Email Client"></Navbar1>
+            <Navbar text="Email Client"></Navbar>
             <Top />
             <Main />
         </Container>

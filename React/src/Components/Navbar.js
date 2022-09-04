@@ -1,4 +1,4 @@
-function Navbar1(props) {
+export const Navbar = props => {
     return (
         <div>
             <nav className="navbar">
@@ -25,5 +25,4 @@ function Navbar1(props) {
             </nav>
         </div>
     );
-}
-export default Navbar1;
+};
