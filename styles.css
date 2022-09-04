@@ -16,12 +16,6 @@
     border:2px solid rgba(102, 199, 255, 0);
     box-shadow: 0 50px 50px 0 black;
     border-radius:50px;
-    position:relative;
-    Overflow:hidden;
-    z-index:999;
-}
-.navbar{
-    width:100%;
 }
 .navbar_links{
     color:#5049d1;
