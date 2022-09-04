@@ -1,4 +1,4 @@
-import image from "./Images/18.png";
+import image from "../../Images/18.png";
 
 function Top(props) {
     return (

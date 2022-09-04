@@ -1,7 +1,7 @@
 import { Container } from "./Components/Layout/Container";
 import Main from "./Components/Main.js";
-import { Navbar } from "./Components/Navbar";
-import Top from "./Components/top.js";
+import { Navbar } from "./Components/Layout/Navbar";
+import Top from "./Components/Layout/top.js";
 
 function App() {
     return (

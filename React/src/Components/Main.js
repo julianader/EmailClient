@@ -1,4 +1,4 @@
-import emailimg from "./Images/mail-removebg-preview.png";
+import emailimg from "../Images/mail-removebg-preview.png";
 function Main(props) {
     return (
         <div className="main">
