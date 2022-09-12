@@ -6,11 +6,17 @@ function Main(props) {
             <h1>Email Form</h1>
             <h3>Send breathtaking professional emails in one click!</h3>
             <h6>Please fill in the following inputs</h6>
-            <div id="success" className="success">
-                Emails sent successfully
+            <div id="added" className="success">
+                Email Was Added
             </div>
             <div id="error" className="error">
                 Invalid Email
+            </div>
+            <div id="success" className="success">
+                Email Was Sent Successfully!
+            </div>
+            <div id="empty" className="error">
+                Please fill out the Recipients inputs
             </div>
             <InputEmail />
             <img className="email-img" src={emailimg} alt="Emailimg" />
@@ -23,11 +29,6 @@ function Main(props) {
                     required
                     placeholder="    Body Paragraph..."
                 ></textarea>
-            </div>
-            <div class="sendButton">
-                <button class="main_btn">
-                    <h2>SEND</h2>
-                </button>
             </div>
         </div>
     );

@@ -11,6 +11,7 @@ function App() {
             <Main />
         </Container>
     );
+    
 }
 
 export default App;
