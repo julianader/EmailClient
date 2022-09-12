@@ -25,8 +25,11 @@ export const InputEmail = props => {
                 onKeyUp={e => {
                     if (e.key === "Enter") {
                         // TODO Before adding this email, it should be valid
-                        setEmails([...emails, inputValue]);
-                        setInputValue("");
+                        const re=  /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/; //REGEX
+                        if (re.test(inputValue) === true){
+                            setEmails([...emails, inputValue]);
+                            setInputValue("");
+                        }
                     }
                 }}
                 onChange={e => {
