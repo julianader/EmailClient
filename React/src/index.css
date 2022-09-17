@@ -64,6 +64,7 @@
 /*=================================================================*/
 /*=================================================================*/
 /*=================================================================*/
+
 .main {
     margin: 10px;
     margin-top: 70px;
@@ -180,22 +181,6 @@
     color: red;
     cursor: pointer;
 }
-.success {
-    border: 1px solid green;
-    color: green;
-    border-radius: 15px;
-    padding: 0.5rem 1rem;
-    background: rgb(158, 253, 158);
-    display: none;
-}
-.error {
-    border: 1px solid red;
-    color: red;
-    border-radius: 15px;
-    padding: 0.5rem 1rem;
-    background: rgb(248, 188, 188);
-    display: none;
-}
 .right {
     filter: drop-shadow(15px 15px 15px darkgrey);
     background-repeat: no-repeat;
@@ -213,8 +198,4 @@
     padding: 15px;
     margin-left: 12px;
     border: 2px solid rgb(102, 199, 255);
-}
-
-.form-control {
-    border-radius: 50px;
 }

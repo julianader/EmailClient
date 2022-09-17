@@ -20,7 +20,6 @@ export const InputEmail = props => {
             ))}
             <input
                 type="text"
-                id ="hello"
                 placeholder="Recipients"
                 value={inputValue}
                 onKeyUp={e => {
@@ -62,7 +61,7 @@ export const InputEmail = props => {
                     document.getElementById('added').style.display = "none";
                     document.getElementById('error').style.display = "none";
                 }
-                else{
+                else if (emails.length!==0){
                 document.getElementById('empty').style.display = "none";
                 document.getElementById('added').style.display = "none";
                 document.getElementById('error').style.display = "none";
@@ -72,7 +71,7 @@ export const InputEmail = props => {
                     <h2>SEND</h2>
             </button>
         </div>
-            
         </div>
+        
     );
 };
