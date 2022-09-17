@@ -1,8 +1,11 @@
 import { Chip, InputAdornment, TextField } from "@mui/material";
 import { useState } from "react";
+import { isEmailValid } from "../../helper/validators";
 
-export const InputEmail = ({ emails, setEmails, setPopupStatus }) => {
+export const InputEmail = ({ emails, setEmails }) => {
     const [inputValue, setInputValue] = useState("");
+
+    const [errorCode, setErrorCode] = useState(null);
 
     return (
         <TextField
@@ -14,18 +17,18 @@ export const InputEmail = ({ emails, setEmails, setPopupStatus }) => {
                 setInputValue(e.target.value);
             }}
             onKeyUp={e => {
-                if (e.key === "Enter") {
-                    const re = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/; //REGEX
-                    if (re.test(inputValue) === true) {
+                if (e.key === "Enter" && inputValue !== "") {
+                    if (isEmailValid(inputValue)) {
+                        setErrorCode(null);
                         setEmails([...emails, inputValue]);
                         setInputValue("");
-                    } else if (inputValue === "") {
-                        setPopupStatus("empty");
-                    } else if (re.test(inputValue) === false) {
-                        setPopupStatus("invalid-email");
+                    } else {
+                        setErrorCode("invalid");
                     }
                 }
             }}
+            error={errorCode !== null}
+            helperText={errorCode === null ? null : errorMessages[errorCode]}
             InputProps={{
                 startAdornment: (
                     <InputAdornment position="start">
@@ -44,4 +47,9 @@ export const InputEmail = ({ emails, setEmails, setPopupStatus }) => {
             }}
         />
     );
+};
+
+const errorMessages = {
+    invalid: "Invalid Email",
+    required: "This field is required",
 };
