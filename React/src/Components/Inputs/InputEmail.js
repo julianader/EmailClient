@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Tag } from "../Core/Tag";
 
-export const InputEmail = ({ emails, setEmails }) => {
+export const InputEmail = ({ emails, setEmails, setPopupStatus }) => {
     const [inputValue, setInputValue] = useState("");
 
     return (
@@ -22,24 +22,15 @@ export const InputEmail = ({ emails, setEmails }) => {
                 value={inputValue}
                 onKeyUp={e => {
                     if (e.key === "Enter") {
-                        // TODO Before adding this email, it should be valid
                         const re =
                             /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/; //REGEX
                         if (re.test(inputValue) === true) {
-                            // document.getElementById("error").style.display = "none";
-                            // document.getElementById("success").style.display = "none";
-                            // document.getElementById("empty").style.display = "none";
-
                             setEmails([...emails, inputValue]);
                             setInputValue("");
                         } else if (inputValue === "") {
-                            // document.getElementById("empty").style.display = "block";
-                            // document.getElementById("success").style.display = "none";
-                            // document.getElementById("error").style.display = "none";
+                            setPopupStatus("empty");
                         } else if (re.test(inputValue) === false) {
-                            // document.getElementById("error").style.display = "block";
-                            // document.getElementById("empty").style.display = "none";
-                            // document.getElementById("success").style.display = "none";
+                            setPopupStatus("invalid-email");
                         }
                     }
                 }}

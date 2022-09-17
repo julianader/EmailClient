@@ -17,7 +17,7 @@ function Main(props) {
             <h6>Please fill in the following inputs</h6>
             <Popup status={popupStatus} />
 
-            <InputEmail emails={emails} setEmails={setEmails} />
+            <InputEmail emails={emails} setEmails={setEmails} setPopupStatus={setPopupStatus} />
 
             {/* <img className="email-img" src={emailimg} alt="Emailimg" /> */}
             {/* <div class="textarea">
