@@ -137,41 +137,6 @@
     margin-top: 0;
     display: flex;
 }
-.main_btn {
-    font-size: 20px;
-    background: linear-gradient(to right, #1c768f, #5049d1);
-    padding: 0px 20px;
-    padding-top: 10px;
-    border: none;
-    border-radius: 6px;
-    color: #fff;
-    cursor: pointer;
-    position: relative;
-    transition: all 0.35s;
-}
-.main_btn h2 {
-    position: relative;
-    z-index: 2;
-    color: #fff;
-    text-decoration: none;
-}
-.main_btn:after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: #032539;
-    transition: all 0.35s;
-    border-radius: 4px;
-}
-.main_btn:hover {
-    color: #fff;
-}
-.main_btn:hover:after {
-    width: 100%;
-}
 .material-icons {
     padding-bottom: 0.1rem;
     padding-left: 0.5rem;
