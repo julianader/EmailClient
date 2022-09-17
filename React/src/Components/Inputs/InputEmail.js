@@ -26,23 +26,20 @@ export const InputEmail = ({ emails, setEmails }) => {
                         const re =
                             /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/; //REGEX
                         if (re.test(inputValue) === true) {
-                            document.getElementById("added").style.display = "block";
-                            document.getElementById("error").style.display = "none";
-                            document.getElementById("success").style.display = "none";
-                            document.getElementById("empty").style.display = "none";
+                            // document.getElementById("error").style.display = "none";
+                            // document.getElementById("success").style.display = "none";
+                            // document.getElementById("empty").style.display = "none";
 
                             setEmails([...emails, inputValue]);
                             setInputValue("");
                         } else if (inputValue === "") {
-                            document.getElementById("empty").style.display = "block";
-                            document.getElementById("added").style.display = "none";
-                            document.getElementById("success").style.display = "none";
-                            document.getElementById("error").style.display = "none";
+                            // document.getElementById("empty").style.display = "block";
+                            // document.getElementById("success").style.display = "none";
+                            // document.getElementById("error").style.display = "none";
                         } else if (re.test(inputValue) === false) {
-                            document.getElementById("error").style.display = "block";
-                            document.getElementById("added").style.display = "none";
-                            document.getElementById("empty").style.display = "none";
-                            document.getElementById("success").style.display = "none";
+                            // document.getElementById("error").style.display = "block";
+                            // document.getElementById("empty").style.display = "none";
+                            // document.getElementById("success").style.display = "none";
                         }
                     }
                 }}

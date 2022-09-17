@@ -2,18 +2,20 @@
 import Button from "@mui/material/Button";
 import { useState } from "react";
 import { InputEmail } from "./Inputs/InputEmail";
-import Popup from "./Core/Popup";
+import { Popup } from "./Core/Popup";
 
 function Main(props) {
     // Form Data
     const [emails, setEmails] = useState([]);
+
+    const [popupStatus, setPopupStatus] = useState(null);
 
     return (
         <div className="main">
             <h1>Email Form</h1>
             <h3>Send breathtaking professional emails in one click!</h3>
             <h6>Please fill in the following inputs</h6>
-            <Popup />
+            <Popup status={popupStatus} />
 
             <InputEmail emails={emails} setEmails={setEmails} />
 
@@ -35,15 +37,10 @@ function Main(props) {
                     size="large"
                     onClick={e => {
                         if (emails.length === 0) {
-                            document.getElementById("empty").style.display = "block";
-                            document.getElementById("success").style.display = "none";
-                            document.getElementById("added").style.display = "none";
-                            document.getElementById("error").style.display = "none";
-                        } else if (emails.length !== 0) {
-                            document.getElementById("empty").style.display = "none";
-                            document.getElementById("added").style.display = "none";
-                            document.getElementById("error").style.display = "none";
-                            document.getElementById("success").style.display = "block";
+                            setPopupStatus("empty");
+                        } else {
+                            setPopupStatus("success");
+                            console.log(emails);
                         }
                     }}
                 >
