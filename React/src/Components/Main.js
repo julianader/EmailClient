@@ -14,6 +14,7 @@ function Main(props) {
             <InputEmail />
             <img className="email-img" src={emailimg} alt="Emailimg" />
             <div class="textarea">
+                <StyleText></StyleText>
             <textarea
                     class="bodytext"
                     name="bio"
