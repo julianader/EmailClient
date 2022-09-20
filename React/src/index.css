@@ -7,41 +7,31 @@
 
 .toph1 {
     float: left;
-    padding: 100px 100px;
+    display:flex;
 }
-/*=================================================================*/
-/*=================================================================*/
-/*=================================================================*/
-/*=================================================================*/
 
-.main h1 {
+.mainh1 {
     text-align: center;
-    background-color: #032539;
     background-image: linear-gradient(to bottom, #000 0%, #5049d1 100%);
-    background-size: 100%;
-    font-weight: 600;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.main h3 {
-    padding-bottom: 15px;
+.mainh3 {
     text-align: center;
-    background-image: linear-gradient(to bottom, red 0%, #f37b12 100%);
+    background-image: linear-gradient(to bottom, red 0%, #ffa352 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-weight: 600;
 }
-.main h6 {
-    text-align: center;
-    font-weight: 600;
-    padding-bottom: 10px;
+.mainh6 {
+    text-align: center; 
 }
+
 .sendButton {
     align-items: center;
     justify-items: center;
     justify-content: center;
-    margin-top: 0;
+    margin-top: 20px;
     display: flex;
 }
 .material-icons {
@@ -53,10 +43,7 @@
     color: red;
     cursor: pointer;
 }
-.right {
-    filter: drop-shadow(15px 15px 15px darkgrey);
-    background-repeat: no-repeat;
-}
+
 .email-img {
     width: 350px;
     float: right;

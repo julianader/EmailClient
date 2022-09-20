@@ -3,6 +3,18 @@ import Button from "@mui/material/Button";
 import { useState } from "react";
 import { InputEmail } from "./Inputs/InputEmail";
 import { Popup } from "./Core/Popup";
+import { Typography } from '@mui/material';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+const theme = createTheme({
+  typography: {
+    allVariants: {
+      fontFamily: 'Calibri',
+      fontWeight: 'bold',
+    },
+  },
+});
+
 
 function Main(props) {
     // Form Data
@@ -12,12 +24,19 @@ function Main(props) {
 
     return (
         <div className="main">
-            <h1>Email Form</h1>
-            <h3>Send breathtaking professional emails in one click!</h3>
-            <h6>Please fill in the following inputs</h6>
-            <Popup status={popupStatus} />
-
-            <InputEmail emails={emails} setEmails={setEmails} />
+            <ThemeProvider theme={theme}>
+            <Typography variant="h2" className="mainh1" paddingBottom={2}>
+                Email Form
+            </Typography>
+            <Typography variant="h4" className="mainh3" paddingBottom={2}>
+            Send breathtaking professional emails in one click!
+            </Typography>
+            <Typography variant="h6" className="mainh6" paddingBottom={2}>
+            Send breathtaking professional emails in one click!
+            </Typography>
+            </ThemeProvider>
+            <Popup className="Popup" status={popupStatus}/><br />
+            <InputEmail className="reciepientsInput" emails={emails} setEmails={setEmails} />
 
             {/* <img className="email-img" src={emailimg} alt="Emailimg" /> */}
             {/* <div class="textarea">
@@ -42,8 +61,7 @@ function Main(props) {
                             setPopupStatus("success");
                             console.log(emails);
                         }
-                    }}
-                >
+                    }}>
                     SEND
                 </Button>
             </div>

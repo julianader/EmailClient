@@ -2,22 +2,20 @@ import image from "../../Images/18.png";
 import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 
+
 function Top(props) {
     return (
-        <div>
-            <Typography variant="h1" class="toph1">
+          <Box sx={{p:5}}>
+            <Typography variant="h3" className="toph1" paddingTop={10}>
             A new email client <br /> designed to keep you <br /> calm and focused
-            </Typography>;
+            </Typography>
             <Box
             component="img"
-            sx={{
-            height: 400,
-            maxHeight: { xs: 400, md: 400 },
-            }}
+            align="right"
+            sx={{height: 400}}
             alt="Working on Laptop."
-            src={image}
-        />
-        </div>
+            src={image} />
+          </Box>
     );
 }
 
