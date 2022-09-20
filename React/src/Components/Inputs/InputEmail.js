@@ -4,14 +4,14 @@ import { isEmailValid } from "../../helper/validators";
 
 export const InputEmail = ({ emails, setEmails }) => {
     const [inputValue, setInputValue] = useState("");
-
     const [errorCode, setErrorCode] = useState(null);
 
     return (
         <TextField
-            variant="outlined"
+            id="outlined-textarea"
             label={"Recipients"}
             value={inputValue}
+            placeholder="To:"
             fullWidth
             onChange={e => {
                 setInputValue(e.target.value);

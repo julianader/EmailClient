@@ -5,7 +5,7 @@ import { InputEmail } from "./Inputs/InputEmail";
 import { Popup } from "./Core/Popup";
 import { Typography } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-
+import TextField from "@mui/material/TextField";
 const theme = createTheme({
   typography: {
     allVariants: {
@@ -37,6 +37,13 @@ function Main(props) {
             </ThemeProvider>
             <Popup className="Popup" status={popupStatus}/><br />
             <InputEmail className="reciepientsInput" emails={emails} setEmails={setEmails} />
+            <br /><br />
+            <TextField id="outlined-multiline-static"
+                label="BodyText"
+                multiline
+                fullWidth
+                rows={10}>
+            </TextField>
 
             {/* <img className="email-img" src={emailimg} alt="Emailimg" /> */}
             {/* <div class="textarea">
