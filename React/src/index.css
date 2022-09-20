@@ -27,26 +27,7 @@
     padding-left: 30px;
     padding-top: 30px;
 }
-.top {
-    background-color: rgba(255, 255, 255, 0.5);
-    height: 425px;
-    margin: 10px;
-    border: 2px solid rgba(102, 199, 255, 0);
-    box-shadow: 0 10px 10px 0 darkgrey;
-    border-radius: 50px;
-    position: relative;
-    overflow: hidden;
-    z-index: 999;
-    margin: 10px;
-    margin-top: 70px;
-    padding: 8px;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 10px 10px 0 darkgrey;
-    border-radius: 50px;
-    overflow: hidden;
-}
-.top h1 {
+.toph1 {
     float: left;
     padding: 100px 100px;
 }
