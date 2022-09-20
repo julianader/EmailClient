@@ -3,18 +3,6 @@
 }
 .body {
     background-color: #5049d1;
-    padding: 0px;
-    margin: 0;
-}
-.container {
-    background-image: url("./Images/pattern_wave.png");
-    background-color: whitesmoke;
-    height: 1350px;
-    width: 1200px;
-    margin: 70px auto;
-    border: 2px solid rgba(102, 199, 255, 0);
-    box-shadow: 0 50px 50px 0 black;
-    border-radius: 50px;
 }
 .navbar {
     width: 100%;
@@ -49,6 +37,14 @@
     position: relative;
     overflow: hidden;
     z-index: 999;
+    margin: 10px;
+    margin-top: 70px;
+    padding: 8px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 10px 10px 0 darkgrey;
+    border-radius: 50px;
+    overflow: hidden;
 }
 .top h1 {
     float: left;
@@ -65,16 +61,6 @@
 /*=================================================================*/
 /*=================================================================*/
 
-.main {
-    margin: 10px;
-    margin-top: 70px;
-    padding: 8px;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 10px 10px 0 darkgrey;
-    border-radius: 50px;
-    overflow: hidden;
-}
 .main h1 {
     text-align: center;
     background-color: #032539;
