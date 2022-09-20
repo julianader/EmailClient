@@ -4,38 +4,10 @@
 .body {
     background-color: #5049d1;
 }
-.navbar {
-    width: 100%;
-    display: flex;
-}
-.navbar_links {
-    color: #5049d1;
-    width: 100px;
-    text-decoration: none;
-    display: inline-flex;
-    padding-top: 30px;
-    padding-right: 30px;
-    font-size: 1.3rem;
-}
-.navbar ul {
-    display: flex;
-    align-items: center;
-    list-style: none;
-}
 
-.navbar h3 {
-    padding-left: 30px;
-    padding-top: 30px;
-}
 .toph1 {
     float: left;
     padding: 100px 100px;
-}
-.img {
-    height: 400px;
-    float: right;
-    padding-right: 50px;
-    padding-top: 50px;
 }
 /*=================================================================*/
 /*=================================================================*/

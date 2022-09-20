@@ -6,7 +6,7 @@ import {CardContainer} from "./Components/Layout/Card"
 function App() {
     return (
         <Container>
-            <Navbar text="Email Client"></Navbar>
+            <Navbar />
             <CardContainer>
             <Top />
             </CardContainer>
