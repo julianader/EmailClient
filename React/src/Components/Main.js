@@ -17,6 +17,7 @@ const theme = createTheme({
 
 
 function Main(props) {
+    const [show, setShow] = useState(true);
     // Form Data
     const [emails, setEmails] = useState([]);
 
@@ -34,7 +35,7 @@ function Main(props) {
             Send breathtaking professional emails in one click!
             </Typography>
             </ThemeProvider>
-            <Popup className="Popup" status={popupStatus}/><br />
+            <Popup className="Popup" status={popupStatus} show={show}  setShow={setShow}/><br />
             <InputEmail className="reciepientsInput" emails={emails} setEmails={setEmails} />
             <br /><br />
             <StyleText />
@@ -50,9 +51,11 @@ function Main(props) {
                     onClick={e => {
                         if (emails.length === 0) {
                             setPopupStatus("empty");
+                            setShow(true);
                         } else {
                             setPopupStatus("success");
                             console.log(emails);
+                            setShow(true);
                         }
                     }}>
                     SEND
