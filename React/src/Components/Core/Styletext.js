@@ -7,13 +7,12 @@ import FormatAlignJustifyIcon from '@mui/icons-material/FormatAlignJustify';
 import FormatBoldIcon from '@mui/icons-material/FormatBold';
 import FormatItalicIcon from '@mui/icons-material/FormatItalic';
 import FormatUnderlinedIcon from '@mui/icons-material/FormatUnderlined';
-import FormatColorFillIcon from '@mui/icons-material/FormatColorFill';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import Divider from '@mui/material/Divider';
 import Paper from '@mui/material/Paper';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
-
+import { Typography } from '@mui/material';
+// import Main from "../../Components/Main"
 const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
   '& .MuiToggleButtonGroup-grouped': {
     margin: theme.spacing(0.5),
@@ -30,16 +29,18 @@ const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
   },
 }));
 
-export default function CustomizedDividers() {
-  const [alignment, setAlignment] = React.useState('left');
-  const [formats, setFormats] = React.useState(() => ['italic']);
+export const StyleText = () =>  {
+  const [alignment, setAlignment] = React.useState([]);
+  const [formats, setFormats] = React.useState([]);
 
-  const handleFormat = (event, newFormats) => {
+  const handleFormat = (e, newFormats) => {
     setFormats(newFormats);
+    console.log(formats)
   };
 
-  const handleAlignment = (event, newAlignment) => {
+  const handleAlignment = (e, newAlignment) => {
     setAlignment(newAlignment);
+    console.log(alignment)
   };
 
   return (
@@ -50,8 +51,19 @@ export default function CustomizedDividers() {
           display: 'flex',
           border: (theme) => `1px solid ${theme.palette.divider}`,
           flexWrap: 'wrap',
+          fontFamily:'sans-serif'
         }}
       >
+        {/* <Main formats={formats} alignment={alignment}></Main> */}
+        <Typography
+        sx={{
+          m:2,
+          fontWeight:formats.includes('bold')? 900 : 200,
+          textDecoration: formats.includes('underline')?'underline':'none',
+          fontStyle:formats.includes('italic')?'italic':'normal',
+        }}
+        align={alignment.includes('left')? 'left':alignment.includes('center')?'center':alignment.includes('right')?'right':'none'}
+        > Hello there my name is julia nader gimy i'm a computer science student</Typography>
         <StyledToggleButtonGroup
           size="small"
           value={alignment}
@@ -85,12 +97,8 @@ export default function CustomizedDividers() {
           <ToggleButton value="italic" aria-label="italic">
             <FormatItalicIcon />
           </ToggleButton>
-          <ToggleButton value="underlined" aria-label="underlined">
+          <ToggleButton value="underline" aria-label="underline">
             <FormatUnderlinedIcon />
-          </ToggleButton>
-          <ToggleButton value="color" aria-label="color" disabled>
-            <FormatColorFillIcon />
-            <ArrowDropDownIcon />
           </ToggleButton>
         </StyledToggleButtonGroup>
       </Paper>

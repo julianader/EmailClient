@@ -1,4 +1,3 @@
-// import emailimg from "../Images/mail-removebg-preview.png";
 import Button from "@mui/material/Button";
 import { useState } from "react";
 import { InputEmail } from "./Inputs/InputEmail";
@@ -6,6 +5,7 @@ import { Popup } from "./Core/Popup";
 import { Typography } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import TextField from "@mui/material/TextField";
+import {StyleText} from "./Core/Styletext"
 const theme = createTheme({
   typography: {
     allVariants: {
@@ -21,7 +21,6 @@ function Main(props) {
     const [emails, setEmails] = useState([]);
 
     const [popupStatus, setPopupStatus] = useState(null);
-
     return (
         <div className="main">
             <ThemeProvider theme={theme}>
@@ -38,25 +37,12 @@ function Main(props) {
             <Popup className="Popup" status={popupStatus}/><br />
             <InputEmail className="reciepientsInput" emails={emails} setEmails={setEmails} />
             <br /><br />
+            <StyleText />
             <TextField id="outlined-multiline-static"
                 label="BodyText"
                 multiline
                 fullWidth
-                rows={10}>
-            </TextField>
-
-            {/* <img className="email-img" src={emailimg} alt="Emailimg" /> */}
-            {/* <div class="textarea">
-                <StyleText></StyleText>
-                <textarea
-                    class="bodytext"
-                    name="bio"
-                    rows="10"
-                    cols="75"
-                    required
-                    placeholder="    Body Paragraph..."
-                ></textarea>
-            </div> */}
+                rows={10} /> 
             <div className="sendButton">
                 <Button
                     variant="contained"
@@ -76,3 +62,4 @@ function Main(props) {
     );
 }
 export default Main;
+

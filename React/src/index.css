@@ -34,27 +34,3 @@
     margin-top: 20px;
     display: flex;
 }
-.material-icons {
-    padding-bottom: 0.1rem;
-    padding-left: 0.5rem;
-}
-
-.material-icons:hover {
-    color: red;
-    cursor: pointer;
-}
-
-.email-img {
-    width: 350px;
-    float: right;
-    filter: drop-shadow(10px 10px 10px darkgrey);
-}
-.textarea {
-    margin: 15px;
-}
-.bodytext {
-    border-radius: 25px;
-    padding: 15px;
-    margin-left: 12px;
-    border: 2px solid rgb(102, 199, 255);
-}
