@@ -17,11 +17,19 @@ const theme = createTheme({
 
 
 function Main(props) {
+    //to show or close the alert
     const [show, setShow] = useState(true);
     // Form Data
     const [emails, setEmails] = useState([]);
 
     const [popupStatus, setPopupStatus] = useState(null);
+
+    // for the text field
+    const [value, setValue] = useState("");
+    const handleChange = e =>{
+        console.log(e.target.value)
+        setValue(e.target.value)
+    };
     return (
         <div className="main">
             <ThemeProvider theme={theme}>
@@ -38,11 +46,13 @@ function Main(props) {
             <Popup className="Popup" status={popupStatus} show={show}  setShow={setShow}/><br />
             <InputEmail className="reciepientsInput" emails={emails} setEmails={setEmails} />
             <br /><br />
-            <StyleText />
+            <StyleText value={value}/>
             <TextField id="outlined-multiline-static"
                 label="BodyText"
                 multiline
                 fullWidth
+                value={value}
+                onChange={handleChange}
                 rows={10} /> 
             <div className="sendButton">
                 <Button

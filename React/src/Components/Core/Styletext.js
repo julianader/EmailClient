@@ -29,7 +29,7 @@ const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
   },
 }));
 
-export const StyleText = () =>  {
+export const StyleText = ({value}) =>  {
   const [alignment, setAlignment] = React.useState([]);
   const [formats, setFormats] = React.useState([]);
 
@@ -54,7 +54,6 @@ export const StyleText = () =>  {
           fontFamily:'sans-serif'
         }}
       >
-        {/* <Main formats={formats} alignment={alignment}></Main> */}
         <Typography
         sx={{
           m:2,
@@ -63,7 +62,7 @@ export const StyleText = () =>  {
           fontStyle:formats.includes('italic')?'italic':'normal',
         }}
         align={alignment.includes('left')? 'left':alignment.includes('center')?'center':alignment.includes('right')?'right':'none'}
-        > Hello there my name is julia nader gimy i'm a computer science student</Typography>
+        > {value}</Typography>
         <StyledToggleButtonGroup
           size="small"
           value={alignment}
