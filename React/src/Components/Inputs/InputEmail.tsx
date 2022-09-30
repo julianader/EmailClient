@@ -1,10 +1,12 @@
+import React from 'react';
 import { Chip, InputAdornment, TextField } from "@mui/material";
 import { useState } from "react";
 import { isEmailValid } from "../../helper/validators";
 
-export const InputEmail = ({ emails, setEmails }) => {
+export const InputEmail = (props:any, e: React.ChangeEvent<HTMLInputElement>) => {
+
     const [inputValue, setInputValue] = useState("");
-    const [errorCode, setErrorCode] = useState(null);
+    const [errorCode, setErrorCode] =  useState<any | null>(null);
 
     return (
         <TextField
@@ -14,13 +16,13 @@ export const InputEmail = ({ emails, setEmails }) => {
             placeholder="To:"
             fullWidth
             onChange={e => {
-                setInputValue(e.target.value);
+                setInputValue(e.currentTarget.value);
             }}
             onKeyUp={e => {
                 if (e.key === "Enter" && inputValue !== "") {
                     if (isEmailValid(inputValue)) {
                         setErrorCode(null);
-                        setEmails([...emails, inputValue]);
+                        props.setEmails([...props.emails, inputValue]);
                         setInputValue("");
                     } else {
                         setErrorCode("invalid");
@@ -32,13 +34,13 @@ export const InputEmail = ({ emails, setEmails }) => {
             InputProps={{
                 startAdornment: (
                     <InputAdornment position="start">
-                        {emails.map((email, index) => (
+                        {props.emails.map((email, index) => (
                             <Chip
                                 key={index}
                                 label={email}
                                 onDelete={e => {
-                                    const filteredEmails = emails.filter(e => e !== email);
-                                    setEmails(filteredEmails);
+                                    const filteredEmails = props.emails.filter(e => e !== email);
+                                    props.setEmails(filteredEmails);
                                 }}
                             />
                         ))}

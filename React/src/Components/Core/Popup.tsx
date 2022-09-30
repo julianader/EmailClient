@@ -1,4 +1,5 @@
-import * as React from "react";
+// import * as React from "react";
+import React from "react";
 import Alert from "@mui/material/Alert";
 import Stack from "@mui/material/Stack";
 // status: "invalid-email" | "empty" | "success" | null
@@ -10,7 +11,6 @@ export const Popup = (props:any) => {
     if (props.show){
     return (
         <Stack spacing={2}>
-            
             {props.status === "invalid-email" && (
                 <Alert closeText="Close" variant="filled" id="error" severity="error">
                     Invalid Email!

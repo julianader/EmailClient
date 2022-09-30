@@ -1,3 +1,4 @@
+import React from 'react';
 import Button from "@mui/material/Button";
 import { useState } from "react";
 import { InputEmail } from "./Inputs/InputEmail";
@@ -16,13 +17,13 @@ const theme = createTheme({
 });
 
 
-function Main(props) {
+function Main(props:any, e: React.ChangeEvent<HTMLInputElement>){
     //to show or close the alert
-    const [show, setShow] = useState(true);
+    const [show, setShow] =  useState<any | true>(true);
     // Form Data
-    const [emails, setEmails] = useState([]);
+    const [emails, setEmails] = useState<any | []>([]);
 
-    const [popupStatus, setPopupStatus] = useState(null);
+    const [popupStatus, setPopupStatus] = useState<any | null>(null);
 
     // for the text field
     const [value, setValue] = useState("");
@@ -43,7 +44,7 @@ function Main(props) {
             Send breathtaking professional emails in one click!
             </Typography>
             </ThemeProvider>
-            <Popup className="Popup" status={popupStatus} show={show}  setShow={setShow}/><br />
+            <Popup className="Popup" status={popupStatus} show={show}  setShow={setShow} /><br />
             <InputEmail className="reciepientsInput" emails={emails} setEmails={setEmails} />
             <br /><br />
             <StyleText value={value}/>

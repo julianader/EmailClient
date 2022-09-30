@@ -9,7 +9,7 @@
     "typeRoots" : ["node_modules/@types", "src/types"],
     "lib": ["es6", "dom"],
     "noImplicitThis": true,
-    "strictNullChecks": true,
+    "strictNullChecks": false,
     
     /* Projects */
     // "incremental": true,                              /* Save .tsbuildinfo files to allow for incremental compilation of projects. */
