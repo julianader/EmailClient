@@ -6,7 +6,7 @@ import BackgroundImage from '../../Images/pattern_wave.png'
 const bgimg = {
     backgroundImage: 'url('+ BackgroundImage+')'
 }
-export const Container = props => {
+function Container(props) {
     return (
         <Box  m={8}>  {/* 2 curly brackets: 1 to access a proprety {margin, padding} the other as a side {top, bottom, right, left} */}
             <Card  style={bgimg}>
@@ -15,3 +15,5 @@ export const Container = props => {
         </Box>
     );
 };
+
+export default Container;

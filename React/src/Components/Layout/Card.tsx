@@ -2,7 +2,7 @@ import * as React from 'react';
 import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
 
-export const CardContainer = props => {
+export const CardContainer = (props:any) => {
     return (
         <Box sx={{m:3}}>
         <Card className="top">

@@ -1,10 +1,12 @@
-import { Container } from "./Components/Layout/Container";
+import React from 'react'
+import Container from "./Components/Layout/Container";
 import Main from "./Components/Main.js";
 import { Navbar } from "./Components/Layout/Navbar";
 import Top from "./Components/Layout/top.js";
 import {CardContainer} from "./Components/Layout/Card"
-function App() {
-    return (
+
+const App:React.FC=()=>{
+    return(
         <Container>
             <Navbar />
             <CardContainer>
@@ -14,8 +16,7 @@ function App() {
             <Main />
             </CardContainer>
         </Container>
-    );
-    
+    )
 }
 
 export default App;
