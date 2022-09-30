@@ -4,10 +4,10 @@
     "jsx":"react",
     "baseUrl": ".",
     "allowJs": true,
+    "noImplicitAny": false,
     /* Visit https://aka.ms/tsconfig to read more about this file */
     "typeRoots" : ["node_modules/@types", "src/types"],
     "lib": ["es6", "dom"],
-    "noImplicitAny": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
     

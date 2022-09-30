@@ -1,9 +1,9 @@
 import image from "../../Images/18.png";
 import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
+import React from 'react'
 
-
-function Top(props) {
+function Top(props:any) {
     return (
           <Box sx={{p:5}}>
             <Typography variant="h3" className="toph1" paddingTop={10}>
@@ -11,7 +11,7 @@ function Top(props) {
             </Typography>
             <Box
             component="img"
-            align="right"
+            // align="right"
             sx={{height: 400}}
             alt="Working on Laptop."
             src={image} />

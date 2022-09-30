@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
-import FormatAlignLeftIcon from '@mui/icons-material/FormatAlignLeft';
-import FormatAlignCenterIcon from '@mui/icons-material/FormatAlignCenter';
-import FormatAlignRightIcon from '@mui/icons-material/FormatAlignRight';
-import FormatAlignJustifyIcon from '@mui/icons-material/FormatAlignJustify';
+// import FormatAlignLeftIcon from '@mui/icons-material/FormatAlignLeft';
+// import FormatAlignCenterIcon from '@mui/icons-material/FormatAlignCenter';
+// import FormatAlignRightIcon from '@mui/icons-material/FormatAlignRight';
+// import FormatAlignJustifyIcon from '@mui/icons-material/FormatAlignJustify';
 import FormatBoldIcon from '@mui/icons-material/FormatBold';
 import FormatItalicIcon from '@mui/icons-material/FormatItalic';
 import FormatUnderlinedIcon from '@mui/icons-material/FormatUnderlined';
@@ -12,7 +12,10 @@ import Paper from '@mui/material/Paper';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import { Typography } from '@mui/material';
-// import Main from "../../Components/Main"
+
+// import FormatColorFillIcon from '@mui/icons-material/FormatColorFill';
+// import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+
 const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
   '& .MuiToggleButtonGroup-grouped': {
     margin: theme.spacing(0.5),
@@ -29,19 +32,25 @@ const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
   },
 }));
 
-export const StyleText = ({value}) =>  {
-  const [alignment, setAlignment] = React.useState([]);
-  const [formats, setFormats] = React.useState([]);
+export const StyleText = (props:any) =>{
+  // const [alignment, setAlignment] = React.useState('left');
+  const [formats, setFormats] = React.useState(() => ['italic']);
 
-  const handleFormat = (e, newFormats) => {
+  const handleFormat = (
+    event: React.MouseEvent<HTMLElement>,
+    newFormats: string[],
+  ) => {
     setFormats(newFormats);
-    console.log(formats)
+    console.log(formats);
   };
 
-  const handleAlignment = (e, newAlignment) => {
-    setAlignment(newAlignment);
-    console.log(alignment)
-  };
+  // const handleAlignment = (
+  //   event: React.MouseEvent<HTMLElement>,
+  //   newAlignment: string,
+  // ) => {
+  //   setAlignment(newAlignment);
+  //   console.log(formats);
+  // };
 
   return (
     <div>
@@ -51,7 +60,6 @@ export const StyleText = ({value}) =>  {
           display: 'flex',
           border: (theme) => `1px solid ${theme.palette.divider}`,
           flexWrap: 'wrap',
-          fontFamily:'sans-serif'
         }}
       >
         <Typography
@@ -61,9 +69,9 @@ export const StyleText = ({value}) =>  {
           textDecoration: formats.includes('underline')?'underline':'none',
           fontStyle:formats.includes('italic')?'italic':'normal',
         }}
-        align={alignment.includes('left')? 'left':alignment.includes('center')?'center':alignment.includes('right')?'right':'none'}
-        > {value}</Typography>
-        <StyledToggleButtonGroup
+        // align={alignment.includes('left')? 'left':alignment.includes('center')?'center':alignment.includes('right')?'right':'none'}
+        > {props.value}</Typography>
+        {/* <StyledToggleButtonGroup
           size="small"
           value={alignment}
           exclusive
@@ -79,10 +87,10 @@ export const StyleText = ({value}) =>  {
           <ToggleButton value="right" aria-label="right aligned">
             <FormatAlignRightIcon />
           </ToggleButton>
-          <ToggleButton value="justify" aria-label="justified" disabled>
+          <ToggleButton value="justify" aria-label="justified">
             <FormatAlignJustifyIcon />
           </ToggleButton>
-        </StyledToggleButtonGroup>
+        </StyledToggleButtonGroup> */}
         <Divider flexItem orientation="vertical" sx={{ mx: 0.5, my: 1 }} />
         <StyledToggleButtonGroup
           size="small"
@@ -99,6 +107,10 @@ export const StyleText = ({value}) =>  {
           <ToggleButton value="underline" aria-label="underline">
             <FormatUnderlinedIcon />
           </ToggleButton>
+          {/* <ToggleButton value="color" aria-label="color">
+            <FormatColorFillIcon />
+            <ArrowDropDownIcon />
+          </ToggleButton> */}
         </StyledToggleButtonGroup>
       </Paper>
     </div>
