@@ -5,7 +5,7 @@ import { Navbar } from "./Components/Layout/Navbar";
 import Top from "./Components/Layout/top";
 import { CardContainer } from "./Components/Layout/Card";
 
-const App: React.FC = () => {
+const App = () => {
     return (
         <Container>
             <Navbar />

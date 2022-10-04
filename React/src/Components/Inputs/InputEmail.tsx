@@ -1,12 +1,16 @@
-import React from 'react';
+import React from "react";
 import { Chip, InputAdornment, TextField } from "@mui/material";
 import { useState } from "react";
 import { isEmailValid } from "../../helper/validators";
 
-export const InputEmail = (props:any, e: React.ChangeEvent<HTMLInputElement>) => {
+type InputEmailProps = {
+    emails: string[];
+    setEmails: (emails: string[]) => void;
+};
 
+export const InputEmail = (props: InputEmailProps) => {
     const [inputValue, setInputValue] = useState("");
-    const [errorCode, setErrorCode] =  useState<any | null>(null);
+    const [errorCode, setErrorCode] = useState<any | null>(null);
 
     return (
         <TextField

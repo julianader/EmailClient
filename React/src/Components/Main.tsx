@@ -17,7 +17,7 @@ const theme = createTheme({
     },
 });
 
-function Main(props: any) {
+function Main() {
     //to show or close the alert
     const [show, setShow] = useState(true);
     // Form Data
@@ -44,9 +44,9 @@ function Main(props: any) {
                     Send breathtaking professional emails in one click!
                 </Typography>
             </ThemeProvider>
-            <Popup className="Popup" status={popupStatus} show={show} setShow={setShow} />
+            <Popup status={popupStatus} show={show} setShow={setShow} />
             <br />
-            <InputEmail className="reciepientsInput" emails={emails} setEmails={setEmails} />
+            <InputEmail emails={emails} setEmails={setEmails} />
             <br />
             <br />
             <StyleText value={value} />
