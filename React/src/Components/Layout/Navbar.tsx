@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
 
-export const Navbar = (props:any) =>{
+export const Navbar = () =>{
   return (
       <AppBar position="static" color="transparent">
         <Toolbar>

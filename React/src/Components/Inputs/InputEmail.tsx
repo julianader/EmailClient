@@ -10,7 +10,7 @@ type InputEmailProps = {
 
 export const InputEmail = (props: InputEmailProps) => {
     const [inputValue, setInputValue] = useState("");
-    const [errorCode, setErrorCode] = useState<any | null>(null);
+    const [errorCode, setErrorCode] = useState<string | null>(null);
 
     return (
         <TextField
